@@ -1,0 +1,4 @@
+name = "francois_replication"
+uuid = "fe76335b-8ab4-421f-a2ad-de72d443cea5"
+authors = ["Till Kadereit <till.kadereit@sciencespo.fr>"]
+version = "0.1.0"
