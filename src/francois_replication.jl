@@ -10,8 +10,10 @@ Pkg.add("XLSX")
 
 using XLSX
 
-xf  = XLSX.readdata("ethnicgroup_sorted2.XLSX", "ethnicgroup_data", "A2:Y11750")
-
+#sort author's excel columns and store them in respective variable 
+rawtext = XLSX.readdata("ethnicgroup_sorted2.XLSX", "ethnicgroup_data!A2:E11750")
+rawnumeric = XLSX.readdata("ethnicgroup_sorted2.XLSX", "ethnicgroup_data!F2:T11750")
+other = XLSX.readdata("ethnicgroup_sorted2.XLSX", "ethnicgroup_data!U2:Y11750")
 
 
 #set the percentage of elites (fixed across countries and time)
@@ -20,7 +22,6 @@ lambda=1
 
 
 #Uganda
-
 firstobs = 10710
 lastobs = 11749
 numeth = 26
@@ -29,11 +30,11 @@ countryparam = [1.682 100000 135.3 0.1004]
 
 #extract the variables over the range of interest
 
-popshare = [firstobs:lastobs,5]/100
-leader = [firstobs:lastobs,6]
-leadertrans = [firstobs:lastobs,15]
-govsize = [firstobs:lastobs,7]
-govposition = [firstobs:lastobs,8]
+popshare = rawnumeric[firstobs:lastobs,5]/100
+leader = rawnumeric[firstobs:lastobs,6]
+leadertrans = rawnumeric[firstobs:lastobs,15]
+govsize = rawnumeric[firstobs:lastobs,7]
+govposition = rawnumeric[firstobs:lastobs,8]
 
 #inlcude all observations
 
@@ -113,7 +114,6 @@ end
 
 
 
-
 # the parameter vector to be estimated is (first to last)
 
 # Fprime - leadership payoff; transformed
@@ -133,7 +133,7 @@ epsilon = 0.115/(1-0.115) # transformed from estimate obtained
 
 
 
-myll = (paramvec) ->splitlikelihood[paramvec,popshare,govshare,P,regimes,includeobs,numeth,lambda,0,0,[alpha epsilon],0]
+myll = (paramvec) -> splitlikelihood[paramvec,popshare,govshare,P,regimes,includeobs,numeth,lambda,0,0,[alpha epsilon],0]
 
 
 
