@@ -1,10 +1,14 @@
 #Replication of Francois et al. "How is power shared in Africa", Till Kadereit, 26.04.2021
 
-#= We want to create the "splitlikelihood" function that calculates the (negative) log likelihood of the dynamic
+
+"""
+splitlikelihood(paramvec, popshare, govshare, P, regimes, includeobs, numeth, lambda, vectorize, estregimes, ae, final) 
+
+    We want to create the "splitlikelihood" function that calculates the (negative) log likelihood of the dynamic
     coalition model. This function is needed for the main MLE file. 
     It returns either the total log likelihood or a vector of log likelihoods for each observation, as well
-        as the predicted shares for each ethnicity in each time period.  =# 
-
+        as the predicted shares for each ethnicity in each time period. 
+"""
 
 
 

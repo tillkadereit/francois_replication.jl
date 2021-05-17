@@ -1,10 +1,10 @@
 
 
-"""
+#=
    26.03.2021, Till Kadereit
    This is the file to replicate the Matlab code of Table 4 (MLE estimation) of Francois, Rainer
    and Trebbi. It is based on the file "estimation" in the provided replication kit. 
-"""
+=#
 
 #install and add the XLSX package to be able to read in excel files
 
