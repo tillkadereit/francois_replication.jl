@@ -1,6 +1,11 @@
-#=26.03.2021, Till Kadereit
+
+
+"""
+26.03.2021, Till Kadereit
 This is the file to replicate the Matlab code of Table 4 (MLE estimation) of Francois, Rainer
-and Trebbi. It is based on the file "estimation" in the provided replication kit. =#
+and Trebbi. It is based on the file "estimation" in the provided replication kit. 
+
+"""
 
 #install and add the XLSX package to be able to read in excel files
 
@@ -10,10 +15,11 @@ Pkg.add("XLSX")
 
 using XLSX
 
-#sort author's excel columns and store them in respective variable 
-rawtext = XLSX.readdata("ethnicgroup_sorted2.XLSX", "ethnicgroup_data!A2:E11750")
-rawnumeric = XLSX.readdata("ethnicgroup_sorted2.XLSX", "ethnicgroup_data!F2:T11750")
-other = XLSX.readdata("ethnicgroup_sorted2.XLSX", "ethnicgroup_data!U2:Y11750")
+#sort author's excel columns and store them in respective variable  (as in the other file)
+data = XLSX.readdata("ethnicgroup_sorted2.XLSX", "ethnicgroup_data", "A2:Y11750")
+
+rawtext = data[:, [1,4,5]]    #save the text columns in "rawtext"
+rawnumeric = data[:,[2,3,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]] #save all other columns in "rawnumeric" 
 
 
 #set the percentage of elites (fixed across countries and time)
