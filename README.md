@@ -1,5 +1,4 @@
-# francois_replication.jl
-Replication of  "How is power shared in Africa" by Francois et al.
+# Replication of  "How is power shared in Africa" by Francois et al.
 
 Part of the evaluation of the course "Numerical Methods" (Prof. Oswald, Sciences Po Paris, Spring 2021) was to use Julia to replicate a published paper written in Matlab. 
 
