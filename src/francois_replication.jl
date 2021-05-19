@@ -8,18 +8,14 @@
 
 #install and add the XLSX package to be able to read in excel files
 
-
-using Pkg
-Pkg.add("XLSX")
-
 using XLSX
 
 #sort author's excel columns and store them in respective variable  (as in the other file)
+
 data = XLSX.readdata("ethnicgroup_sorted2.XLSX", "ethnicgroup_data", "A2:Y11750")
 
 rawtext = data[:, [1,4,5]]    #save the text columns in "rawtext"
-rawnumeric = data[:,[2,3,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]] #save all other columns in "rawnumeric" 
-
+rawnumeric = data[:,2:25]     #save all other columns in "rawnumeric" 
 
 #set the percentage of elites (fixed across countries and time)
 lambda=1
