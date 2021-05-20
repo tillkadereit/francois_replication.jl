@@ -10,6 +10,9 @@
 
 using XLSX
 
+
+function main() 
+
 #sort author's excel columns and store them in respective variable  (as in the other file)
 
 data = XLSX.readdata("ethnicgroup_sorted2.XLSX", "ethnicgroup_data", "A2:Y11750")
@@ -218,3 +221,8 @@ disp("with standard errors:")
 se = sqrt(diag(J*inv(var)*J')); #standard errors
 
 [se[1] se[2] se[3] se[4] seorig[1]]
+
+
+
+
+end 

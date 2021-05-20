@@ -3,9 +3,9 @@ the "pooledestimation" file of Francois et al. 2013 =#
 
 
 
+function main_pooled()
 
-
-skipest = 1
+skipest = 1 
 
 usetopshare = 0   #set to 0 to use top government positions only 
 
@@ -65,3 +65,7 @@ end
 year = rawnumeric[1:lastdataobs,2]
 country = rawtext[2:lastdataobs+1,1]
 group = rawtext[2:lastdataobs+1,4]
+
+
+
+end 
