@@ -13,13 +13,5 @@ To replicate these results, the "estimation" and "pooledestimation" files are of
 In order to estimate the vector of paramters of interest, two main functions have to be created separetely: The "splitlikelihood" function (for the MLE estimation for single countries) and the "pooledlikelihood" function (for the pooled estimation with all countries). 
 
 
-```@autodocs
-Modules = [francois_replication]
-```
 
-
-end
-
-
-
-1. Main estimation file 
+For the respective files in .jl format, see scr-folder in the main branch of the repository. 

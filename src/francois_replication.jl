@@ -179,7 +179,7 @@ end
 [ll,constflag] = splitlikelihood[paramest,popshare,govshare,P,regimes,includeobs,numeth,lambda,0,0,[alpha epsilon],1]
 
 if constflag .== 1
-    error ("Insider constraint is violated at estimated parameters.")
+    error("Insider constraint is violated at estimated parameters.")
 end
 
 
