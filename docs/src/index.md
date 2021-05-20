@@ -14,4 +14,5 @@ In order to estimate the vector of paramters of interest, two main functions hav
 
 
 
-For the respective files in .jl format, see scr-folder in the main branch of the repository. 
+For the respective files in .jl format (including comments for the steps), see scr-folder in the main branch of the repository. 
+Note: The project was not completed at the time of this documentation.
