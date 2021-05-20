@@ -4,3 +4,6 @@ Part of the evaluation for the course "Numerical Methods" (Prof. Oswald, Science
 
 This repository provides codes and documentation for the project that I have worked on, namely the replication of the paper "How is power shared in Africa?" 
 by Franois, Rainer, Trebbi (2015). 
+
+Link to the documentation page: 
+https://tillkadereit.github.io/francois_replication.jl/ 
