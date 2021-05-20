@@ -1,0 +1,18 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h1 id="my-replication-of-the-paper-how-is-power-shared-in-africa-by-francois-rainer-and-trebbi-2015-">My Replication of the paper &quot;How is power shared in Africa?&quot; by Francois, Rainer and Trebbi (2015)</h1>
+<blockquote>
+<p>This replication study was part of my evaluation for the course <a href="https://floswald.github.io/NumericalMethods/">Numerical Methods</a> at SciencesPo Paris in Spring 2021</p>
+</blockquote>
+<p>The following is the documentation for the replication of the paper &quot;How is power shared in Africa?&quot; by Francois et al. (2015). I will replicate the author&#39;s Matlab code for the paper using Julia. 
+In their paper, Francois et al. aim to answer the question whether African politics is concentrated in the hand of a small ruling elite. 
+Using a rich set of data on the ethnic composition of African ministerial cabinets, Francois et al. provide evidence for inclusive coalitions and a high degree of bargaining within the regimes, which rejects the widespread view that African autocracies are run by a narrow elite. </p>
+<p>The authors thereby rely on a maximum likelihood estimation of their ethnic power sharing model, to estimate the liklihood of an observed cabinet allocation. The central results in table 4 present the maximum liklihood estimates of the model parameters alpha, epsylon, gamma, F, r and xi. 
+To replicate these results, the &quot;estimation&quot; and &quot;pooledestimation&quot; files are of particular importance and serve to estimate the MLE parameters of the dynamic power sharing model. 
+&quot;estimation&quot; estimates the parameters per single country (whose standard parameters are set at the beginning of the file). &quot;Pooledestimation&quot; pools all countries together and estimates alpha and epsilon across countries, whereas F, gamma, xi and r are estimated individually for each country. </p>
+<p>In order to estimate the vector of paramters of interest, two main functions have to be created separetely: The &quot;splitlikelihood&quot; function (for the MLE estimation for single countries) and the &quot;pooledlikelihood&quot; function (for the pooled estimation with all countries). </p>
+<pre><code class="lang-@autodocs"><span class="hljs-attr">Modules</span> = [francois_replication]
+</code></pre>
+<p>end</p>
+</body></html>
